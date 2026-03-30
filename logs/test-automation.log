@@ -1,0 +1,103 @@
+2026-03-30 21:55:46.530 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 21:55:46.554 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 21:55:47.740 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 21:55:53.377 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 21:55:53.378 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 21:55:53.460 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 21:55:53.470 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-03-30 21:55:54.211 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 21:55:54.212 [main] DEBUG epam.training.pages.HomePage - Waiting for Home page to fully load
+2026-03-30 21:55:54.443 [main] INFO  epam.training.pages.HomePage - Home page loaded successfully
+2026-03-30 21:55:55.675 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 21:55:55.676 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 21:55:59.155 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 21:55:59.256 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 21:55:59.256 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 21:55:59.399 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 21:55:59.406 [main] DEBUG epam.training.pages.HomePage - Waiting for 'Skills' link to become visible
+2026-03-30 21:55:59.606 [main] INFO  epam.training.pages.HomePage - Clicking 'Skills' link
+2026-03-30 21:56:02.494 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 21:56:02.494 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 21:56:05.855 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 21:56:05.957 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 21:56:05.958 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 21:56:06.043 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 21:56:06.047 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-03-30 23:17:34.557 [main] INFO  epam.training.listeners.TestListener - starting test: verifyHomePage
+2026-03-30 23:17:34.599 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 23:17:34.599 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 23:17:38.889 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 23:17:39.013 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 23:17:39.015 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 23:17:39.112 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 23:17:39.119 [main] INFO  epam.training.listeners.TestListener - test passed: verifyHomePage
+2026-03-30 23:17:39.124 [main] INFO  epam.training.listeners.TestListener - starting test: verifyTrainingPageUrl
+2026-03-30 23:17:39.125 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-03-30 23:17:39.416 [main] DEBUG epam.training.pages.TrainingPage - TrainingPage initialized
+2026-03-30 23:17:39.814 [main] INFO  epam.training.listeners.TestListener - test passed: verifyTrainingPageUrl
+2026-03-30 23:17:39.816 [main] INFO  epam.training.listeners.TestListener - starting test: verifyTrainingHeading
+2026-03-30 23:17:39.818 [main] DEBUG epam.training.pages.TrainingPage - Waiting for training content to load
+2026-03-30 23:17:39.892 [main] INFO  epam.training.pages.TrainingPage - Training content loaded
+2026-03-30 23:17:39.893 [main] DEBUG epam.training.pages.TrainingPage - Getting heading text
+2026-03-30 23:17:39.988 [main] INFO  epam.training.pages.TrainingPage - Heading text: 'Training programs'
+2026-03-30 23:17:39.989 [main] INFO  epam.training.listeners.TestListener - test passed: verifyTrainingHeading
+2026-03-30 23:17:39.991 [main] INFO  epam.training.listeners.TestListener - starting test: verifyNavigationBack
+2026-03-30 23:17:39.992 [main] INFO  epam.training.pages.TrainingPage - Navigating back to Home page
+2026-03-30 23:17:40.019 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 23:17:40.020 [main] DEBUG epam.training.pages.HomePage - Waiting for Home page to fully load
+2026-03-30 23:17:40.249 [main] INFO  epam.training.pages.HomePage - Home page loaded successfully
+2026-03-30 23:17:40.263 [main] INFO  epam.training.listeners.TestListener - test passed: verifyNavigationBack
+2026-03-30 23:17:41.385 [main] INFO  epam.training.listeners.TestListener - starting test: waitForPageToLoad
+2026-03-30 23:17:41.394 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 23:17:41.394 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 23:17:44.261 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 23:17:44.351 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 23:17:44.352 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 23:17:44.446 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 23:17:44.446 [main] INFO  epam.training.listeners.TestListener - test passed: waitForPageToLoad
+2026-03-30 23:17:44.449 [main] INFO  epam.training.listeners.TestListener - starting test: verifyOnSkillsButton
+2026-03-30 23:17:44.451 [main] DEBUG epam.training.pages.HomePage - Waiting for 'Skills' link to become visible
+2026-03-30 23:17:44.496 [main] INFO  epam.training.pages.HomePage - Clicking 'Skills' link
+2026-03-30 23:17:44.750 [main] DEBUG epam.training.pages.SkillsPage - SkillsPage initialized
+2026-03-30 23:17:44.750 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skills container to load
+2026-03-30 23:17:45.204 [main] INFO  epam.training.pages.SkillsPage - Skills container loaded
+2026-03-30 23:17:45.219 [main] INFO  epam.training.listeners.TestListener - test passed: verifyOnSkillsButton
+2026-03-30 23:17:45.221 [main] INFO  epam.training.listeners.TestListener - starting test: verifySkillsCard
+2026-03-30 23:17:45.223 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skills container to load
+2026-03-30 23:17:45.393 [main] INFO  epam.training.pages.SkillsPage - Skills container loaded
+2026-03-30 23:17:45.393 [main] DEBUG epam.training.pages.SkillsPage - Waiting for search input to become visible
+2026-03-30 23:17:45.444 [main] INFO  epam.training.pages.SkillsPage - Typing skill name: '.NET'
+2026-03-30 23:17:45.845 [main] INFO  epam.training.pages.SkillsPage - Validating skill card is visible: '.NET'
+2026-03-30 23:17:45.944 [main] DEBUG epam.training.pages.SkillsPage - Skill card '.NET' found
+2026-03-30 23:17:45.945 [main] INFO  epam.training.pages.SkillsPage - Clicking on skill card: '.NET'
+2026-03-30 23:17:46.045 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skill cover image to load
+2026-03-30 23:17:46.628 [main] INFO  epam.training.pages.SkillsPage - Skill cover image loaded
+2026-03-30 23:17:46.647 [main] INFO  epam.training.listeners.TestListener - test passed: verifySkillsCard
+2026-03-30 23:17:48.099 [main] INFO  epam.training.listeners.TestListener - starting test: waitHomePage
+2026-03-30 23:17:48.114 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-03-30 23:17:48.114 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-03-30 23:17:50.954 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-03-30 23:17:51.049 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-03-30 23:17:51.049 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-03-30 23:17:51.109 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-03-30 23:17:51.109 [main] INFO  epam.training.listeners.TestListener - test passed: waitHomePage
+2026-03-30 23:17:51.110 [main] INFO  epam.training.listeners.TestListener - starting test: goToTrainingPage
+2026-03-30 23:17:51.111 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-03-30 23:17:51.324 [main] DEBUG epam.training.pages.TrainingPage - TrainingPage initialized
+2026-03-30 23:17:51.682 [main] INFO  epam.training.listeners.TestListener - test passed: goToTrainingPage
+2026-03-30 23:17:51.685 [main] INFO  epam.training.listeners.TestListener - starting test: verifySubscription
+2026-03-30 23:17:51.686 [main] INFO  epam.training.pages.TrainingPage - Clicking 'Subscribe' button
+2026-03-30 23:17:51.877 [main] DEBUG epam.training.pages.SubscribePage - SubscribePage initialized
+2026-03-30 23:17:51.877 [main] DEBUG epam.training.pages.SubscribePage - Waiting for subscribe modal to appear
+2026-03-30 23:17:52.042 [main] INFO  epam.training.pages.SubscribePage - Subscribe modal is visible
+2026-03-30 23:17:52.474 [main] INFO  epam.training.pages.SubscribePage - Typing first name: 'Firstnameqa'
+2026-03-30 23:17:52.733 [main] INFO  epam.training.pages.SubscribePage - Typing last name: 'Lastnameqa'
+2026-03-30 23:17:52.932 [main] INFO  epam.training.pages.SubscribePage - Clicking country dropdown
+2026-03-30 23:17:53.197 [main] INFO  epam.training.pages.SubscribePage - Selecting first country from dropdown
+2026-03-30 23:17:53.424 [main] INFO  epam.training.pages.SubscribePage - Typing email: 'validemail@gmail.com'
+2026-03-30 23:17:53.717 [main] INFO  epam.training.pages.SubscribePage - Clicking skills dropdown
+2026-03-30 23:17:53.929 [main] INFO  epam.training.pages.SubscribePage - Selecting first skill from dropdown
+2026-03-30 23:17:54.080 [main] INFO  epam.training.pages.SubscribePage - Clicking 'Subscribe' button
+2026-03-30 23:17:54.233 [main] DEBUG epam.training.pages.SubscribePage - Waiting for success popup to appear
+2026-03-30 23:17:55.031 [main] INFO  epam.training.pages.SubscribePage - Success popup is displayed
+2026-03-30 23:17:55.032 [main] INFO  epam.training.listeners.TestListener - test passed: verifySubscription

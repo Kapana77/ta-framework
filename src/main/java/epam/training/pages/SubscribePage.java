@@ -2,88 +2,111 @@ package epam.training.pages;
 
 import static epam.training.utils.WaitUtils.waitForVisibility;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class SubscribePage extends AbstractPage {
 
-  private static final String INPUT_PATTERN = "//input[@placeholder='";
+  @FindBy(xpath = "//input[@placeholder='First name']")
+  private WebElement firstNameInput;
 
-  private static final By SEARCH_INPUT = By.xpath(
-      "//input[@type='search' and @placeholder='Search']");
-  private static final By SUBSCRIBE_HEADER = By.cssSelector("div.uui-modal-title");
-  public static final By FIRST_OPTION = By.xpath("//div[@role='option']");
-  private static final By SUCCESS_POPUP = By.cssSelector("div[role='alert'].uui-color-success");
-  private static final By FIRST_NAME_INPUT = By.xpath(INPUT_PATTERN + "First name']");
-  private static final By LAST_NAME_INPUT = By.xpath(INPUT_PATTERN + "Last name']");
-  private static final By EMAIL_INPUT = By.xpath(INPUT_PATTERN + "mail@example.com']");
-  private static final By COUNTRY_DROPDOWN =
-      By.xpath("//label[contains(text(),'Country')]/ancestor::div[@class='uui-label-top']"
-          + "//div[contains(@class,'uui-picker_toggler')]");
-  private static final By SKILL_DROPDOWN =
-      By.xpath("//label[contains(text(),'Skill')]/ancestor::div[@class='uui-label-top']"
-          + "//div[contains(@class,'uui-picker_toggler')]");
-  private static final By SUBSCRIBE_BUTTON =
-      By.xpath("//div[contains(@class,'uui-modal-footer')]//button[.//div[text()='Subscribe']]");
+  @FindBy(xpath = "//input[@placeholder='Last name']")
+  private WebElement lastNameInput;
 
+  @FindBy(xpath = "//input[@placeholder='mail@example.com']")
+  private WebElement emailInput;
+
+  @FindBy(css = "div.uui-modal-title")
+  private WebElement subscribeHeader;
+
+  @FindBy(xpath = "//div[@role='option']")
+  private WebElement firstOption;
+
+  @FindBy(css = "div[role='alert'].uui-color-success")
+  private WebElement successPopup;
+
+  @FindBy(xpath = "//label[contains(text(),'Country')]/ancestor::div[@class='uui-label-top']"
+      + "//div[contains(@class,'uui-picker_toggler')]")
+  private WebElement countryDropdown;
+
+  @FindBy(xpath = "//label[contains(text(),'Skill')]/ancestor::div[@class='uui-label-top']"
+      + "//div[contains(@class,'uui-picker_toggler')]")
+  private WebElement skillDropdown;
+
+  @FindBy(xpath = "//div[contains(@class,'uui-modal-footer')]//button[.//div[text()='Subscribe']]")
+  private WebElement subscribeButton;
 
   public SubscribePage(WebDriver driver) {
     super(driver);
+    logger.debug("SubscribePage initialized");
   }
 
   @Override
-  public AbstractPage openPage() {
-    return this;
-  }
-
-  public SubscribePage typeFirstName(String firstName) {
-    waitAndType(FIRST_NAME_INPUT, firstName);
-    return this;
-  }
-
-  public SubscribePage typeLastName(String lastName) {
-    waitAndType(LAST_NAME_INPUT, lastName);
+  public SubscribePage openPage() {
+    logger.info("SubscribePage opened via navigation");
     return this;
   }
 
   public SubscribePage waitForSubscribeScreen() {
-    waitForVisibility(driver, SUBSCRIBE_HEADER);
+    logger.debug("Waiting for subscribe modal to appear");
+    waitForVisibility(driver, subscribeHeader);
+    logger.info("Subscribe modal is visible");
+    return this;
+  }
+
+  public SubscribePage typeFirstName(String firstName) {
+    logger.info("Typing first name: '{}'", firstName);
+    type(firstNameInput, firstName);
+    return this;
+  }
+
+  public SubscribePage typeLastName(String lastName) {
+    logger.info("Typing last name: '{}'", lastName);
+    type(lastNameInput, lastName);
     return this;
   }
 
   public SubscribePage typeEmail(String email) {
-    waitAndType(EMAIL_INPUT, email);
+    logger.info("Typing email: '{}'", email);
+    type(emailInput, email);
     return this;
   }
 
   public SubscribePage clickCountryDropdown() {
-    waitAndClick(COUNTRY_DROPDOWN);
+    logger.info("Clicking country dropdown");
+    click(countryDropdown);
     return this;
   }
 
   public SubscribePage selectFirstCountry() {
-    waitAndClick(FIRST_OPTION);
+    logger.info("Selecting first country from dropdown");
+    click(firstOption);
     return this;
   }
 
-
   public SubscribePage clickSkillsDropdown() {
-    waitAndClick(SKILL_DROPDOWN);
+    logger.info("Clicking skills dropdown");
+    click(skillDropdown);
     return this;
   }
 
   public SubscribePage selectFirstSkill() {
-    waitAndClick(FIRST_OPTION);
+    logger.info("Selecting first skill from dropdown");
+    click(firstOption);
     return this;
   }
 
   public SubscribePage clickSubscribeButton() {
-    waitAndClick(SUBSCRIBE_BUTTON);
+    logger.info("Clicking 'Subscribe' button");
+    click(subscribeButton);
     return this;
   }
 
   public SubscribePage verifySuccessPopup() {
-    waitForVisibility(driver, SUCCESS_POPUP);
+    logger.debug("Waiting for success popup to appear");
+    waitForVisibility(driver, successPopup);
+    logger.info("Success popup is displayed");
     return this;
   }
 }

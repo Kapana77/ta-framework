@@ -18,4 +18,8 @@ public abstract class BaseTest {
   public void tearDown() {
     DriverSingleton.closeDriver();
   }
+  
+  public WebDriver getDriver() {
+    return driver;
+  }
 }

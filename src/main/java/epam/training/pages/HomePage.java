@@ -2,59 +2,84 @@ package epam.training.pages;
 
 import static epam.training.utils.WaitUtils.waitForVisibility;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
 
-  private static final By NAV_BAR = By.cssSelector("div[class*='nav-bar']");
-  private static final By MAIN_LOGO = By.cssSelector("div.main-logo");
-  private static final By TRAINING_LINK = By.xpath("//div[@data-name='Trainings']");
-  private static final By EVENTS_LINK = By.xpath("//div[@data-name='Events']");
-  private static final By FIND_BUTTON = By.cssSelector("div.uui-caption");
-  public static final By SKILLS_LINK = By.xpath("//div[@data-name='Skills']");
+  @FindBy(css = "div[class*='nav-bar']")
+  private WebElement navBar;
+
+  @FindBy(css = "div.main-logo")
+  private WebElement mainLogo;
+
+  @FindBy(xpath = "//div[@data-name='Trainings']")
+  private WebElement trainingLink;
+
+  @FindBy(xpath = "//div[@data-name='Events']")
+  private WebElement eventsLink;
+
+  @FindBy(xpath = "//div[@data-name='Skills']")
+  private WebElement skillsLink;
+
+  @FindBy(css = "div.uui-caption")
+  private WebElement findButton;
 
   public HomePage(WebDriver driver) {
     super(driver);
+    logger.debug("HomePage initialized");
   }
 
   @Override
   public HomePage openPage() {
+    logger.info("Opening Home page: {}", BASE_URL);
     driver.get(BASE_URL);
     return this;
   }
 
   public boolean isLogoDisplayed() {
-    return waitForVisibility(driver, MAIN_LOGO).isDisplayed();
+    logger.debug("Checking if main logo is displayed");
+    boolean displayed = waitForVisibility(driver, mainLogo).isDisplayed();
+    logger.info("Main logo displayed: {}", displayed);
+    return displayed;
   }
 
   public boolean isNavBarDisplayed() {
-    return waitForVisibility(driver, NAV_BAR).isDisplayed();
+    logger.debug("Checking if navigation bar is displayed");
+    boolean displayed = waitForVisibility(driver, navBar).isDisplayed();
+    logger.info("Navigation bar displayed: {}", displayed);
+    return displayed;
   }
 
-
   public TrainingPage clickTrainingLink() {
-    waitAndClick(TRAINING_LINK);
+    logger.info("Clicking 'Trainings' link");
+    click(trainingLink);
     return new TrainingPage(driver);
   }
 
   public EventsPage clickEventsLink() {
-    waitAndClick(EVENTS_LINK);
+    logger.info("Clicking 'Events' link");
+    click(eventsLink);
     return new EventsPage(driver);
   }
 
   public HomePage waitForSkillsLink() {
-    waitForVisibility(driver, SKILLS_LINK);
+    logger.debug("Waiting for 'Skills' link to become visible");
+    waitForVisibility(driver, skillsLink);
     return this;
   }
 
   public SkillsPage clickSkillsLink() {
-    waitAndClick(SKILLS_LINK);
+    logger.info("Clicking 'Skills' link");
+    click(skillsLink);
     return new SkillsPage(driver);
   }
 
   public HomePage waitPageLoaded() {
-    waitForVisibility(driver, FIND_BUTTON);
+    logger.debug("Waiting for Home page to fully load");
+    waitForVisibility(driver, findButton);
+    logger.info("Home page loaded successfully");
     return this;
   }
 }

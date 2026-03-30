@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Selenium WebDriver Task Suite" parallel="false">
+
+<suite name="Regression Suite" parallel="false">
 
   <listeners>
     <listener class-name="epam.training.listeners.TestListener"/>
   </listeners>
 
-  <test name="Navigation Tests">
+
+  <test name="Regression Tests">
     <classes>
       <class name="epam.training.tests.NavigationScenarioTest"/>
-    </classes>
-  </test>
-
-  <test name="Skills Search Tests">
-    <classes>
       <class name="epam.training.tests.SkillSearchScenarioTest"/>
-    </classes>
-  </test>
-
-  <test name="Subscription scenario test">
-    <classes>
       <class name="epam.training.tests.SubscribeScenarioTest"/>
     </classes>
   </test>

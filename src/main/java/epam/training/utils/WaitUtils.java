@@ -20,29 +20,19 @@ public class WaitUtils {
     return new WebDriverWait(driver, DEFAULT_TIMEOUT)
         .until(ExpectedConditions.visibilityOfElementLocated(locator));
   }
-  
+
   public static WebElement waitForClickability(WebDriver driver, By locator) {
     return new WebDriverWait(driver, DEFAULT_TIMEOUT)
         .until(ExpectedConditions.elementToBeClickable(locator));
   }
 
-  public static boolean waitForUrlContains(WebDriver driver, String urlFragment) {
-    return new WebDriverWait(driver, DEFAULT_TIMEOUT)
-        .until(ExpectedConditions.urlContains(urlFragment));
+  public static WebElement waitForVisibility(WebDriver driver, WebElement element) {
+    return new WebDriverWait(driver, Duration.ofSeconds(15))
+        .until(ExpectedConditions.visibilityOf(element));
   }
 
-  public static boolean waitForTitleContains(WebDriver driver, String titleFragment) {
-    return new WebDriverWait(driver, DEFAULT_TIMEOUT)
-        .until(ExpectedConditions.titleContains(titleFragment));
-  }
-
-  public static List<WebElement> waitForPresenceOfAll(WebDriver driver, By locator) {
-    return new WebDriverWait(driver, DEFAULT_TIMEOUT)
-        .until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
-  }
-
-  public static boolean waitForInvisibility(WebDriver driver, By locator) {
-    return new WebDriverWait(driver, DEFAULT_TIMEOUT)
-        .until(ExpectedConditions.invisibilityOfElementLocated(locator));
+  public static WebElement waitForClickability(WebDriver driver, WebElement element) {
+    return new WebDriverWait(driver, Duration.ofSeconds(15))
+        .until(ExpectedConditions.elementToBeClickable(element));
   }
 }

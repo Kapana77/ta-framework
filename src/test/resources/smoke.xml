@@ -1,0 +1,12 @@
+<suite name="Smoke Suite">
+  <listeners>
+    <listener class-name="epam.training.listeners.TestListener"/>
+  </listeners>
+
+  <test name="Smoke Tests">
+    <classes>
+      <class name="epam.training.tests.NavigationScenarioTest"/>
+      <class name="epam.training.tests.SubscribeScenarioTest"/>
+    </classes>
+  </test>
+</suite>
