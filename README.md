@@ -1,0 +1,7 @@
+## S.O.L.I.D. Corrections
+
+| Class | Problem                                                                                                                                                                                    | Solution |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| `DriverSingleton` | Single Responsibility broken. Class managed singleton and also contained all browser creation logic (switch statement, browser options, WebDriverManager setup). Two distinct reasons to change. | Browser creation logic extracted into `BrowserFactory`  (`ChromeBrowserFactory`, `FirefoxBrowserFactory`, `EdgeBrowserFactory`). `DriverSingleton` now only manages the single instance. |
+| `DriverSingleton` | Open Closed Principle broken. Adding support for a new browser required modifying the `createDriver` switch statement inside `DriverSingleton`.                                            | With Factory Method pattern, adding a new browser requires only creating a new `BrowserFactory` subclass. 
+| `WebDriver` usage across framework | Open Closed Principle broken Adding some behavior (logging for example) to WebDriver calls would require modifying `AbstractPage` or test classes directly.                                | `LoggingWebDriver` decorator wraps the driver Logging behavior is added without modifying any existing page object or test class. |
