@@ -53,6 +53,18 @@
       <artifactId>selenide</artifactId>
       <version>7.2.3</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.epam.reportportal</groupId>
+      <artifactId>agent-java-testng</artifactId>
+      <version>5.3.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.epam.reportportal</groupId>
+      <artifactId>logger-java-log4j</artifactId>
+      <version>5.1.8</version>
+    </dependency>
     
   </dependencies>
 

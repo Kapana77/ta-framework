@@ -5,6 +5,7 @@
 
   <listeners>
     <listener class-name="epam.training.listeners.TestListener"/>
+    <listener class-name="epam.training.listeners.ReportPortalListener"/>
   </listeners>
 
 

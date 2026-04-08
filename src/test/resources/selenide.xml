@@ -1,4 +1,4 @@
-<suite name="Smoke Suite">
+<suite name="Selenide test">
   <listeners>
     <listener class-name="epam.training.listeners.TestListener"/>
     <listener class-name="epam.training.listeners.ReportPortalListener"/>
@@ -6,8 +6,7 @@
 
   <test name="Smoke Tests">
     <classes>
-      <class name="epam.training.tests.NavigationScenarioTest"/>
-      <class name="epam.training.tests.SubscribeScenarioTest"/>
+      <class name="epam.training.selenide.SkillSearchSelenideTest"/>
     </classes>
   </test>
 </suite>
