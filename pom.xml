@@ -15,6 +15,7 @@
     <selenium.version>4.18.1</selenium.version>
     <testng.version>7.9.0</testng.version>
     <webdrivermanager.version>5.7.0</webdrivermanager.version>
+    <cucumber.version>7.34.3</cucumber.version>
   </properties>
 
   <dependencies>
@@ -65,7 +66,20 @@
       <artifactId>logger-java-log4j</artifactId>
       <version>5.1.8</version>
     </dependency>
-    
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumber.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>

@@ -1,0 +1,283 @@
+Running as SYSTEM
+Building remotely on slave in workspace C:\jenkins-slave\workspace\ta-framework-tests
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\jenkins-slave\workspace\ta-framework-tests\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/Kapana77/ta-framework # timeout=10
+Fetching upstream changes from https://github.com/Kapana77/ta-framework
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.45.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/Kapana77/ta-framework +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision da6404ccaf7589aabb3ce9b798f1e0ebf8810b01 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f da6404ccaf7589aabb3ce9b798f1e0ebf8810b01 # timeout=10
+Commit message: "module 10 design patterns implementation"
+ > git.exe rev-list --no-walk da6404ccaf7589aabb3ce9b798f1e0ebf8810b01 # timeout=10
+[ta-framework-tests] $ cmd.exe /C "mvn -f pom.xml clean test -Denv=qa && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< groupId:ta-framework >------------------------
+[INFO] Building ta-framework 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ta-framework ---
+[INFO] Deleting C:\jenkins-slave\workspace\ta-framework-tests\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ta-framework ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.12.1:compile (default-compile) @ ta-framework ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug target 20] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ta-framework ---
+[INFO] Copying 4 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.12.1:testCompile (default-testCompile) @ ta-framework ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug target 20] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ta-framework ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.2.5/surefire-testng-3.2.5.pom
+Progress (1): 839 B
+Progress (1): 2.3 kB
+Progress (1): 3.7 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.2.5/surefire-testng-3.2.5.pom (3.7 kB at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.5/surefire-providers-3.2.5.pom
+Progress (1): 849 B
+Progress (1): 2.2 kB
+Progress (1): 2.6 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.5/surefire-providers-3.2.5.pom (2.6 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.pom
+Progress (1): 849 B
+Progress (1): 2.0 kB
+Progress (1): 2.8 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.pom (2.8 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.2.5/surefire-testng-utils-3.2.5.pom
+Progress (1): 849 B
+Progress (1): 2.1 kB
+Progress (1): 3.2 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.2.5/surefire-testng-utils-3.2.5.pom (3.2 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.2.5/surefire-grouper-3.2.5.pom
+Progress (1): 843 B
+Progress (1): 2.2 kB
+Progress (1): 3.4 kB
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.2.5/surefire-grouper-3.2.5.pom (3.4 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.2.5/surefire-testng-3.2.5.jar
+Progress (1): 0.9/47 kB
+Progress (1): 2.3/47 kB
+Progress (1): 3.6/47 kB
+Progress (1): 5.0/47 kB
+Progress (1): 6.4/47 kB
+Progress (1): 7.7/47 kB
+Progress (1): 8.2/47 kB
+Progress (1): 9.6/47 kB
+Progress (1): 11/47 kB 
+Progress (1): 12/47 kB
+Progress (1): 14/47 kB
+Progress (1): 15/47 kB
+Progress (1): 16/47 kB
+Progress (1): 18/47 kB
+Progress (1): 19/47 kB
+Progress (1): 21/47 kB
+Progress (1): 22/47 kB
+Progress (1): 23/47 kB
+Progress (1): 25/47 kB
+Progress (1): 26/47 kB
+Progress (1): 27/47 kB
+Progress (1): 29/47 kB
+Progress (1): 30/47 kB
+Progress (1): 31/47 kB
+Progress (1): 33/47 kB
+Progress (1): 34/47 kB
+Progress (1): 38/47 kB
+Progress (1): 43/47 kB
+Progress (1): 47/47 kB
+Progress (1): 47 kB   
+                   
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.2.5/surefire-testng-3.2.5.jar (47 kB at 238 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.2.5/surefire-testng-utils-3.2.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.2.5/surefire-grouper-3.2.5.jar
+Progress (1): 3.8/18 kB
+Progress (1): 8.0/18 kB
+Progress (1): 8.2/18 kB
+Progress (1): 12/18 kB 
+Progress (1): 17/18 kB
+Progress (1): 18 kB   
+                   
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.jar (18 kB at 100 kB/s)
+Progress (1): 0.9/40 kB
+Progress (1): 2.3/40 kB
+Progress (2): 2.3/40 kB | 0.9/14 kB
+Progress (2): 3.6/40 kB | 0.9/14 kB
+Progress (2): 3.6/40 kB | 2.3/14 kB
+Progress (2): 5.0/40 kB | 2.3/14 kB
+Progress (2): 5.0/40 kB | 3.6/14 kB
+Progress (2): 5.0/40 kB | 5.0/14 kB
+Progress (2): 5.0/40 kB | 6.4/14 kB
+Progress (2): 6.4/40 kB | 6.4/14 kB
+Progress (2): 6.4/40 kB | 7.7/14 kB
+Progress (2): 6.4/40 kB | 9.1/14 kB
+Progress (2): 7.7/40 kB | 9.1/14 kB
+Progress (2): 9.1/40 kB | 9.1/14 kB
+Progress (2): 9.1/40 kB | 10/14 kB 
+Progress (2): 9.1/40 kB | 12/14 kB
+Progress (2): 9.1/40 kB | 13/14 kB
+Progress (2): 9.1/40 kB | 14 kB   
+Progress (2): 10/40 kB | 14 kB 
+Progress (2): 12/40 kB | 14 kB
+Progress (2): 13/40 kB | 14 kB
+Progress (2): 15/40 kB | 14 kB
+Progress (2): 16/40 kB | 14 kB
+Progress (2): 17/40 kB | 14 kB
+Progress (2): 19/40 kB | 14 kB
+Progress (2): 20/40 kB | 14 kB
+Progress (2): 21/40 kB | 14 kB
+Progress (2): 23/40 kB | 14 kB
+Progress (2): 24/40 kB | 14 kB
+Progress (2): 26/40 kB | 14 kB
+Progress (2): 27/40 kB | 14 kB
+Progress (2): 28/40 kB | 14 kB
+Progress (2): 30/40 kB | 14 kB
+Progress (2): 31/40 kB | 14 kB
+Progress (2): 32/40 kB | 14 kB
+Progress (2): 34/40 kB | 14 kB
+Progress (2): 35/40 kB | 14 kB
+Progress (2): 36/40 kB | 14 kB
+Progress (2): 38/40 kB | 14 kB
+Progress (2): 39/40 kB | 14 kB
+Progress (2): 40 kB | 14 kB   
+                           
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.2.5/surefire-testng-utils-3.2.5.jar (14 kB at 33 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.2.5/surefire-grouper-3.2.5.jar (40 kB at 94 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-04-05 10:23:59.740 [main] INFO  epam.training.driver.factory.BrowserFactory - Selected ChromeBrowserFactory
+Apr 05, 2026 10:24:06 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 146
+Apr 05, 2026 10:24:06 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 146.0.7680.178. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-04-05 10:24:06.147 [main] INFO  epam.training.listeners.TestListener - starting test: verifyHomePage
+2026-04-05 10:24:06.260 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-04-05 10:24:06.261 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-04-05 10:24:06.261 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Navigating to: https://qa.training.epam.com
+2026-04-05 10:24:10.844 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-04-05 10:24:10.969 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-04-05 10:24:10.971 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-04-05 10:24:11.088 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-04-05 10:24:11.096 [main] INFO  epam.training.listeners.TestListener - test passed: verifyHomePage
+2026-04-05 10:24:11.101 [main] INFO  epam.training.listeners.TestListener - starting test: verifyTrainingPageUrl
+2026-04-05 10:24:11.102 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-04-05 10:24:11.654 [main] DEBUG epam.training.pages.TrainingPage - TrainingPage initialized
+2026-04-05 10:24:11.856 [main] INFO  epam.training.listeners.TestListener - test passed: verifyTrainingPageUrl
+2026-04-05 10:24:11.859 [main] INFO  epam.training.listeners.TestListener - starting test: verifyTrainingHeading
+2026-04-05 10:24:11.861 [main] DEBUG epam.training.pages.TrainingPage - Waiting for training content to load
+2026-04-05 10:24:12.256 [main] INFO  epam.training.pages.TrainingPage - Training content loaded
+2026-04-05 10:24:12.256 [main] DEBUG epam.training.pages.TrainingPage - Getting heading text
+2026-04-05 10:24:12.356 [main] INFO  epam.training.pages.TrainingPage - Heading text: 'Training programs'
+2026-04-05 10:24:12.357 [main] INFO  epam.training.listeners.TestListener - test passed: verifyTrainingHeading
+2026-04-05 10:24:12.360 [main] INFO  epam.training.listeners.TestListener - starting test: verifyNavigationBack
+2026-04-05 10:24:12.361 [main] INFO  epam.training.pages.TrainingPage - Navigating back to Home page
+2026-04-05 10:24:12.401 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-04-05 10:24:12.402 [main] DEBUG epam.training.pages.HomePage - Waiting for Home page to fully load
+2026-04-05 10:24:12.777 [main] INFO  epam.training.pages.HomePage - Home page loaded successfully
+2026-04-05 10:24:12.812 [main] INFO  epam.training.listeners.TestListener - test passed: verifyNavigationBack
+2026-04-05 10:24:12.817 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Quitting browser
+2026-04-05 10:24:13.422 [main] INFO  epam.training.driver.factory.BrowserFactory - Selected ChromeBrowserFactory
+Apr 05, 2026 10:24:14 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 146
+Apr 05, 2026 10:24:14 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 146.0.7680.178. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-04-05 10:24:14.778 [main] INFO  epam.training.listeners.TestListener - starting test: waitForPageToLoad
+2026-04-05 10:24:14.787 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-04-05 10:24:14.787 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-04-05 10:24:14.787 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Navigating to: https://qa.training.epam.com
+2026-04-05 10:24:19.115 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-04-05 10:24:19.257 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-04-05 10:24:19.258 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-04-05 10:24:19.404 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-04-05 10:24:19.404 [main] INFO  epam.training.listeners.TestListener - test passed: waitForPageToLoad
+2026-04-05 10:24:19.408 [main] INFO  epam.training.listeners.TestListener - starting test: verifyOnSkillsButton
+2026-04-05 10:24:19.409 [main] DEBUG epam.training.pages.HomePage - Waiting for 'Skills' link to become visible
+2026-04-05 10:24:19.471 [main] INFO  epam.training.pages.HomePage - Clicking 'Skills' link
+2026-04-05 10:24:19.846 [main] DEBUG epam.training.pages.SkillsPage - SkillsPage initialized
+2026-04-05 10:24:19.847 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skills container to load
+2026-04-05 10:24:20.300 [main] INFO  epam.training.pages.SkillsPage - Skills container loaded
+2026-04-05 10:24:20.339 [main] INFO  epam.training.listeners.TestListener - test passed: verifyOnSkillsButton
+2026-04-05 10:24:20.345 [main] INFO  epam.training.listeners.TestListener - starting test: verifySkillsCard
+2026-04-05 10:24:20.346 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skills container to load
+2026-04-05 10:24:20.475 [main] INFO  epam.training.pages.SkillsPage - Skills container loaded
+2026-04-05 10:24:20.476 [main] DEBUG epam.training.pages.SkillsPage - Waiting for search input to become visible
+2026-04-05 10:24:20.559 [main] INFO  epam.training.pages.SkillsPage - Typing skill name: '.NET'
+2026-04-05 10:24:20.875 [main] INFO  epam.training.pages.SkillsPage - Validating skill card is visible: '.NET'
+2026-04-05 10:24:20.936 [main] DEBUG epam.training.pages.SkillsPage - Skill card '.NET' found
+2026-04-05 10:24:20.937 [main] INFO  epam.training.pages.SkillsPage - Clicking on skill card: '.NET'
+2026-04-05 10:24:21.006 [main] DEBUG epam.training.pages.SkillsPage - Waiting for skill cover image to load
+2026-04-05 10:24:22.902 [main] INFO  epam.training.pages.SkillsPage - Skill cover image loaded
+2026-04-05 10:24:22.914 [main] INFO  epam.training.listeners.TestListener - test passed: verifySkillsCard
+2026-04-05 10:24:22.915 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Quitting browser
+2026-04-05 10:24:23.359 [main] INFO  epam.training.driver.factory.BrowserFactory - Selected ChromeBrowserFactory
+Apr 05, 2026 10:24:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 146
+Apr 05, 2026 10:24:24 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 146.0.7680.178. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+2026-04-05 10:24:24.692 [main] INFO  epam.training.listeners.TestListener - starting test: waitHomePage
+2026-04-05 10:24:24.707 [main] DEBUG epam.training.pages.HomePage - HomePage initialized
+2026-04-05 10:24:24.707 [main] INFO  epam.training.pages.HomePage - Opening Home page: https://qa.training.epam.com
+2026-04-05 10:24:24.708 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Navigating to: https://qa.training.epam.com
+2026-04-05 10:24:30.709 [main] DEBUG epam.training.pages.HomePage - Checking if main logo is displayed
+2026-04-05 10:24:30.839 [main] INFO  epam.training.pages.HomePage - Main logo displayed: true
+2026-04-05 10:24:30.839 [main] DEBUG epam.training.pages.HomePage - Checking if navigation bar is displayed
+2026-04-05 10:24:30.930 [main] INFO  epam.training.pages.HomePage - Navigation bar displayed: true
+2026-04-05 10:24:30.931 [main] INFO  epam.training.listeners.TestListener - test passed: waitHomePage
+2026-04-05 10:24:30.934 [main] INFO  epam.training.listeners.TestListener - starting test: goToTrainingPage
+2026-04-05 10:24:30.934 [main] INFO  epam.training.pages.HomePage - Clicking 'Trainings' link
+2026-04-05 10:24:31.238 [main] DEBUG epam.training.pages.TrainingPage - TrainingPage initialized
+2026-04-05 10:24:31.730 [main] INFO  epam.training.listeners.TestListener - test passed: goToTrainingPage
+2026-04-05 10:24:31.735 [main] INFO  epam.training.listeners.TestListener - starting test: verifySubscription
+2026-04-05 10:24:31.736 [main] INFO  epam.training.pages.TrainingPage - Clicking 'Subscribe' button
+2026-04-05 10:24:31.973 [main] DEBUG epam.training.pages.SubscribePage - SubscribePage initialized
+2026-04-05 10:24:31.974 [main] DEBUG epam.training.pages.SubscribePage - Waiting for subscribe modal to appear
+2026-04-05 10:24:32.186 [main] INFO  epam.training.pages.SubscribePage - Subscribe modal is visible
+2026-04-05 10:24:32.445 [main] INFO  epam.training.pages.SubscribePage - Typing first name: 'Firstnameqa'
+2026-04-05 10:24:32.906 [main] INFO  epam.training.pages.SubscribePage - Typing last name: 'Lastnameqa'
+2026-04-05 10:24:33.308 [main] INFO  epam.training.pages.SubscribePage - Clicking country dropdown
+2026-04-05 10:24:33.724 [main] INFO  epam.training.pages.SubscribePage - Selecting first country from dropdown
+2026-04-05 10:24:34.040 [main] INFO  epam.training.pages.SubscribePage - Typing email: 'validemail@gmail.com'
+2026-04-05 10:24:34.480 [main] INFO  epam.training.pages.SubscribePage - Clicking skills dropdown
+2026-04-05 10:24:34.774 [main] INFO  epam.training.pages.SubscribePage - Selecting first skill from dropdown
+2026-04-05 10:24:35.044 [main] INFO  epam.training.pages.SubscribePage - Clicking 'Subscribe' button
+2026-04-05 10:24:35.263 [main] DEBUG epam.training.pages.SubscribePage - Waiting for success popup to appear
+2026-04-05 10:24:36.194 [main] INFO  epam.training.pages.SubscribePage - Success popup is displayed
+2026-04-05 10:24:36.195 [main] INFO  epam.training.listeners.TestListener - test passed: verifySubscription
+2026-04-05 10:24:36.197 [main] INFO  epam.training.driver.decorator.LoggingWebDriver - [LoggingDriver] Quitting browser
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.26 s -- in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  55.146 s
+[INFO] Finished at: 2026-04-05T10:24:36+04:00
+[INFO] ------------------------------------------------------------------------
+[JDK Parameter]: Restored job JDK
+Finished: SUCCESS
